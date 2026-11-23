@@ -7,7 +7,7 @@ import { IMPORT_FORMATS, importLyrics, type ImportFormat } from '../content/lyri
 import { lineText, synced, type Line, type LyricsDocument } from '../content/lyrics/model'
 import { activeIndex, clearTiming, setLineStart, shiftLine, WordSync } from '../content/lyrics/sync'
 
-const DRAFT_KEY = 'metrolist:lyrics-sync-draft'
+const DRAFT_KEY = 'muse:lyrics-sync-draft'
 const NUDGE_MS = 50
 const LYRICS_ACCEPT = '.mlx,.lrc,.elrc,.ttml,.xml,.txt,.json,.qrc,.krc,.yrc,.ass,.ssa'
 
@@ -425,8 +425,8 @@ const SHORTCUTS = [
     <div class="container sync__inner">
       <nav class="sync__nav" aria-label="Lyrics sync">
         <RouterLink to="/" class="sync__brand">
-          <span><img src="/logo.svg" alt="" width="28" height="28" /></span>
-          Metrolist
+          <span><img src="/logo.png" alt="" width="28" height="28" /></span>
+          Muse
         </RouterLink>
         <div v-if="document_" class="sync__nav-actions">
           <button type="button" class="btn btn-outlined btn-sm" aria-label="Start over" @click="startOver">
@@ -445,7 +445,7 @@ const SHORTCUTS = [
         <header class="sync-setup__hero">
           <p class="section-label"><span class="material-symbols-rounded" aria-hidden="true">lyrics</span>Lyrics sync</p>
           <h1 id="sync-title">Time every <span>line and word</span></h1>
-          <p>Drop in a song and its lyrics, tap along as it plays, and export for Metrolist. Everything stays right in your browser and nothing gets uploaded.</p>
+          <p>Drop in a song and its lyrics, tap along as it plays, and export for Muse. Everything stays right in your browser and nothing gets uploaded.</p>
         </header>
 
         <div v-if="savedDraft" class="sync-setup__draft">

@@ -34,7 +34,7 @@ test('shares in-flight requests and caches success for 60 seconds after completi
   jest.advanceTimersByTime(59_999)
   expect(getLatestRelease()).toBe(first)
 
-  const updated = { tag_name: 'v2', assets: [{ name: 'Metrolist.apk', browser_download_url: 'new-apk' }] }
+  const updated = { tag_name: 'v2', assets: [{ name: 'Muse.apk', browser_download_url: 'new-apk' }] }
   fetchMock.mockResolvedValue(Response.json(updated))
   jest.advanceTimersByTime(1)
   const refreshed = getLatestRelease()
@@ -46,7 +46,7 @@ test('shares in-flight requests and caches success for 60 seconds after completi
 
 for (const failure of ['HTTP 429', 'timeout']) {
   test(`keeps the last successful release after a refresh ${failure} and retries`, async () => {
-    const previous = { tag_name: 'v1', assets: [{ name: 'Metrolist.apk', browser_download_url: 'v1-apk' }] }
+    const previous = { tag_name: 'v1', assets: [{ name: 'Muse.apk', browser_download_url: 'v1-apk' }] }
     const fetchMock = spyOn(globalThis, 'fetch').mockResolvedValue(Response.json(previous))
     const cached = await getLatestRelease()
     jest.advanceTimersByTime(60_000)
@@ -68,7 +68,7 @@ for (const failure of ['HTTP 429', 'timeout']) {
     expect(await getLatestRelease()).toBe(cached)
     expect(fetchMock).toHaveBeenCalledTimes(3)
 
-    const updated = { tag_name: 'v2', assets: [{ name: 'Metrolist.apk', browser_download_url: 'v2-apk' }] }
+    const updated = { tag_name: 'v2', assets: [{ name: 'Muse.apk', browser_download_url: 'v2-apk' }] }
     fetchMock.mockResolvedValue(Response.json(updated))
     const recovered = getLatestRelease()
     expect(await recovered).toEqual(updated)

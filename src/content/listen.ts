@@ -4,7 +4,7 @@ export function roomCodeFromQuery(value: unknown): string {
 }
 
 export function listenAppUrl(code: string): string {
-  return roomCodeFromQuery(code) ? `metrolist://party?r=${code}` : ''
+  return roomCodeFromQuery(code) ? `muse://party?r=${code}` : ''
 }
 
 export async function copyRoomCode(code: string): Promise<boolean> {

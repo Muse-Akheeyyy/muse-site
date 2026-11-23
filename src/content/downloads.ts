@@ -46,7 +46,7 @@ export function getLatestRelease() {
       }, RELEASE_TIMEOUT_MS)
     })
     const request = async () => {
-      const response = await fetch('https://api.github.com/repos/MetrolistGroup/Metrolist/releases/latest', {
+      const response = await fetch('https://api.github.com/repos/Muse-Akheeyyy/Muse/releases/latest', {
         signal: controller.signal,
       })
       if (!response.ok) throw new Error(`GitHub returned ${response.status}`)
@@ -85,7 +85,7 @@ export const DOWNLOAD_PLATFORMS: readonly DownloadPlatform[] = [
       {
         key: 'universal',
         name: 'Universal',
-        patterns: [/^Metrolist\.apk$/i, /^Metrolist-izzy\.apk$/i],
+        patterns: [/^Muse\.apk$/i, /^Muse-izzy\.apk$/i],
       }
     ],
   },
@@ -98,13 +98,13 @@ export const DOWNLOAD_PLATFORMS: readonly DownloadPlatform[] = [
     instructions: [
       'Download the unsigned IPA file.',
       'Open it in AltStore, SideStore, or Sideloadly.',
-      'Follow your sideloading tool’s prompts to sign and install Metrolist.',
+      'Follow your sideloading tool’s prompts to sign and install Muse.',
     ],
     architectures: [
       {
         key: 'universal',
         name: 'iPhone & iPad',
-        patterns: [/^Metrolist\.ipa$/i],
+        patterns: [/^Muse\.ipa$/i],
       },
     ],
   },
@@ -123,12 +123,12 @@ export const DOWNLOAD_PLATFORMS: readonly DownloadPlatform[] = [
       {
         key: 'x86_64',
         name: 'x64',
-        patterns: [/^metrolist-desktop-linux-x64-.+\.AppImage$/i],
+        patterns: [/^muse-desktop-linux-x64-.+\.AppImage$/i],
       },
       {
         key: 'arm64',
         name: 'ARM64',
-        patterns: [/^metrolist-desktop-linux-arm64-.+\.AppImage$/i],
+        patterns: [/^muse-desktop-linux-arm64-.+\.AppImage$/i],
       },
     ],
   },
@@ -140,19 +140,19 @@ export const DOWNLOAD_PLATFORMS: readonly DownloadPlatform[] = [
     package: 'DMG',
     instructions: [
       'Download and open the DMG for your Mac.',
-      'Drag Metrolist into your Applications folder.',
-      'Open Metrolist from Applications and approve the first-launch prompt.',
+      'Drag Muse into your Applications folder.',
+      'Open Muse from Applications and approve the first-launch prompt.',
     ],
     architectures: [
       {
         key: 'arm64',
         name: 'Apple silicon',
-        patterns: [/^metrolist-desktop-macos-arm64-.+\.dmg$/i],
+        patterns: [/^muse-desktop-macos-arm64-.+\.dmg$/i],
       },
       {
         key: 'x86_64',
         name: 'Intel',
-        patterns: [/^metrolist-desktop-macos-x64-.+\.dmg$/i],
+        patterns: [/^muse-desktop-macos-x64-.+\.dmg$/i],
       },
     ],
   },
@@ -164,22 +164,22 @@ export const DOWNLOAD_PLATFORMS: readonly DownloadPlatform[] = [
     package: 'Installer or portable ZIP',
     instructions: [
       'Download the EXE installer or portable ZIP for your PC.',
-      'For the EXE, run the installer, follow the prompts, and launch Metrolist from the Start menu.',
-      'For the ZIP, extract it to a folder and run Metrolist from inside.',
+      'For the EXE, run the installer, follow the prompts, and launch Muse from the Start menu.',
+      'For the ZIP, extract it to a folder and run Muse from inside.',
     ],
     architectures: [
       {
         key: 'x64',
         name: 'x64',
         patterns: [
-          /^metrolist-installer-windows-x64-.+\.exe$/i,
-          /^Metrolist-Desktop-windows\.zip$/i,
+          /^muse-installer-windows-x64-.+\.exe$/i,
+          /^Muse-Desktop-windows\.zip$/i,
         ],
       },
       {
         key: 'arm64',
         name: 'ARM64',
-        patterns: [/^metrolist-desktop-windows-arm64-.+\.zip$/i],
+        patterns: [/^muse-desktop-windows-arm64-.+\.zip$/i],
       },
     ],
   },

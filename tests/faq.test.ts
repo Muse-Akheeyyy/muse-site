@@ -43,15 +43,15 @@ test('FAQ reading links resolve to actual guides and section anchors', () => {
 test('homepage answers retain migration, account, and safety qualifications', () => {
   const [platforms, migration, account, safety, hosting] = FAQ_ITEMS
   expect(platforms!.question).toMatch(/platforms/i)
-  expect(migration!.question).toMatch(/original Metrolist/)
+  expect(migration!.question).toMatch(/move over from Metrolist/)
   expect(account!.question).toMatch(/YouTube Music account/)
   expect(safety!.question).toMatch(/safe to use/)
   expect(hosting!.answer).toBe(`No. ${HOSTING_NOTICE}`)
 
-  expect(migration!.answer).toMatch(/backup.*Android.*first/i)
-  expect(migration!.answer).toMatch(/install separately/i)
-  expect(migration!.answer).toMatch(/install the KMP app.*restore your backup/i)
-  expect(migration!.answer).toMatch(/keep the original until.*checked your library/i)
+  expect(migration!.answer).toMatch(/backup in Metrolist first/i)
+  expect(migration!.answer).toMatch(/installs as a separate app/i)
+  expect(migration!.answer).toMatch(/restore that backup/i)
+  expect(migration!.answer).toMatch(/keep the old install until.*checked your library/i)
   expect(account!.answer).toMatch(/without signing in.*Premium/i)
   expect(safety!.answer).toMatch(/does not guarantee/i)
   expect(safety!.answer).toMatch(/own risk/i)

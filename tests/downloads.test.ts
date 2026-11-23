@@ -3,16 +3,16 @@ import { DOWNLOAD_PLATFORMS, findDownloadAsset, type ReleaseAsset } from '../src
 import { faqMarkdown, homeMarkdown } from '../scripts/markdown'
 
 const assets: ReleaseAsset[] = [
-  { name: 'Metrolist-Desktop-windows.zip', browser_download_url: 'windows-portable' },
-  { name: 'metrolist-installer-windows-x64-14.0.0.exe', browser_download_url: 'windows-installer' },
-  { name: 'metrolist-desktop-windows-arm64-14.0.0.zip', browser_download_url: 'windows-arm64' },
-  { name: 'metrolist-desktop-linux-x64-14.0.0.AppImage', browser_download_url: 'linux-x64' },
-  { name: 'metrolist-desktop-linux-arm64-14.0.0.AppImage', browser_download_url: 'linux-arm64' },
-  { name: 'Metrolist.apk', browser_download_url: 'android-normal' },
-  { name: 'Metrolist-izzy.apk', browser_download_url: 'android-izzy' },
-  { name: 'Metrolist.ipa', browser_download_url: 'ios' },
-  { name: 'metrolist-desktop-macos-arm64-14.0.0.dmg', browser_download_url: 'macos-arm64' },
-  { name: 'metrolist-desktop-macos-x64-14.0.0.dmg', browser_download_url: 'macos-intel' },
+  { name: 'Muse-Desktop-windows.zip', browser_download_url: 'windows-portable' },
+  { name: 'muse-installer-windows-x64-14.0.0.exe', browser_download_url: 'windows-installer' },
+  { name: 'muse-desktop-windows-arm64-14.0.0.zip', browser_download_url: 'windows-arm64' },
+  { name: 'muse-desktop-linux-x64-14.0.0.AppImage', browser_download_url: 'linux-x64' },
+  { name: 'muse-desktop-linux-arm64-14.0.0.AppImage', browser_download_url: 'linux-arm64' },
+  { name: 'Muse.apk', browser_download_url: 'android-normal' },
+  { name: 'Muse-izzy.apk', browser_download_url: 'android-izzy' },
+  { name: 'Muse.ipa', browser_download_url: 'ios' },
+  { name: 'muse-desktop-macos-arm64-14.0.0.dmg', browser_download_url: 'macos-arm64' },
+  { name: 'muse-desktop-macos-x64-14.0.0.dmg', browser_download_url: 'macos-intel' },
 ]
 
 test('matches the supplied release filenames and prefers the Windows installer', () => {
@@ -41,11 +41,11 @@ test('rejects missing builds, other platforms, and unsupported architectures', (
   expect(findDownloadAsset('macos', 'arm64', assets.slice(9))).toBeUndefined()
   expect(findDownloadAsset('macos', 'x86_64', assets.slice(8, 9))).toBeUndefined()
   expect(findDownloadAsset('windows', 'x64', [
-    { name: 'metrolist-desktop-windows-arm64-14.0.0.zip', browser_download_url: 'wrong-architecture' },
-    { name: 'metrolist-installer-windows-x64-14.0.0.exe.sha256', browser_download_url: 'checksum' },
+    { name: 'muse-desktop-windows-arm64-14.0.0.zip', browser_download_url: 'wrong-architecture' },
+    { name: 'muse-installer-windows-x64-14.0.0.exe.sha256', browser_download_url: 'checksum' },
   ])).toBeUndefined()
   expect(findDownloadAsset('linux', 'x86_64', [
-    { name: 'metrolist-desktop-linux-arm64-14.0.0.AppImage', browser_download_url: 'wrong-architecture' },
+    { name: 'muse-desktop-linux-arm64-14.0.0.AppImage', browser_download_url: 'wrong-architecture' },
   ])).toBeUndefined()
 })
 

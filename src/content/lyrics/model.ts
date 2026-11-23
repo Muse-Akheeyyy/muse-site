@@ -1,4 +1,4 @@
-// JSON MLX 2.0, the canonical lyrics model shared with Lyprio and Metrolist.
+// JSON MLX 2.0, the canonical lyrics model shared with Lyprio and Muse.
 // The editor works on this shape directly: a line is synced when it has startMs.
 
 export type Word = { text: string; startMs: number; endMs: number }

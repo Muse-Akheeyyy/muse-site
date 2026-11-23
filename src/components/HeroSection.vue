@@ -8,7 +8,7 @@ const compactNumber = new Intl.NumberFormat('en', { notation: 'compact', maximum
 
 onMounted(async () => {
   const [repoResult, releaseResult] = await Promise.allSettled([
-    fetch('https://api.github.com/repos/MetrolistGroup/Metrolist').then(response => {
+    fetch('https://api.github.com/repos/Muse-Akheeyyy/Muse').then(response => {
       if (!response.ok) throw new Error(`GitHub returned ${response.status}`)
       return response.json() as Promise<{ stargazers_count?: number }>
     }),
@@ -32,7 +32,7 @@ onMounted(async () => {
           </p>
           <div class="hero__actions">
             <DownloadDialog button-class="btn btn-filled btn-lg" />
-            <a href="https://github.com/MetrolistGroup/Metrolist" class="btn btn-outlined btn-lg" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Muse-Akheeyyy/Muse" class="btn btn-outlined btn-lg" target="_blank" rel="noopener noreferrer">
               <span class="material-symbols-rounded" aria-hidden="true">code</span>
               View source
             </a>
@@ -43,9 +43,9 @@ onMounted(async () => {
           <span class="hero__signal-icon material-symbols-rounded" aria-hidden="true">desktop_windows</span>
           <div>
             <strong>Phone to desktop</strong>
-            <p>The same Metrolist experience on your phone, tablet, and computer.</p>
+            <p>The same Muse experience on your phone, tablet, and computer.</p>
           </div>
-          <dl class="hero__stats" aria-label="Metrolist repository statistics">
+          <dl class="hero__stats" aria-label="Muse repository statistics">
             <div><dt>License</dt><dd>GPL-3.0</dd></div>
             <div><dt>Stars</dt><dd>{{ repoStats.stars }}</dd></div>
             <div><dt>Latest</dt><dd>{{ repoStats.version }}</dd></div>

@@ -38,7 +38,7 @@ onBeforeUnmount(() => { if (dialog.value?.open) restoreScroll() })
 </script>
 
 <template>
-  <section id="desktop" class="showcase" aria-label="Metrolist app previews">
+  <section id="desktop" class="showcase" aria-label="Muse app previews">
     <div class="container">
       <header class="showcase__heading">
         <p>Take a look around before you install.<br />Flip between Home, Library, and Player on desktop and mobile.</p>

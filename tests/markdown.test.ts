@@ -31,7 +31,7 @@ test('keeps the actual privacy policy after its list through the final contact l
   const markdown = privacyMarkdown(await readFile(new URL('../src/views/PrivacyPage.vue', import.meta.url), 'utf8'))
   expect(markdown).toContain('## Website hosting')
   expect(markdown).toContain('## Updates and contact')
-  expect(markdown).toContain('(mailto:contact@metrolist.cc)')
+  expect(markdown).toContain('(https://github.com/Muse-Akheeyyy/Muse/issues)')
   expect(markdown).toEndWith(`Source: ${SITE_URL}/privacy\n`)
   expect(() => privacyMarkdown('<article>Missing header</article>')).toThrow('Privacy policy content was not found')
 })

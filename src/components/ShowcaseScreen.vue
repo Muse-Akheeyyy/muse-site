@@ -46,12 +46,12 @@ const platformName = computed(() => props.device === 'desktop' ? 'Desktop' : pro
 <template>
   <div class="screen" :class="`screen--${device}`">
     <Transition name="screen-fade">
-      <img v-if="displayedSource && !failed" :key="displayedSource" class="screen__capture" :src="displayedSource" :alt="`Metrolist ${screenName} on ${platformName}`" loading="lazy" decoding="async" @error="onCaptureError" />
-      <div v-else-if="device === 'wear'" class="watch-preview" role="img" aria-label="Illustrative Metrolist Now Playing screen on Wear OS">
+      <img v-if="displayedSource && !failed" :key="displayedSource" class="screen__capture" :src="displayedSource" :alt="`Muse ${screenName} on ${platformName}`" loading="lazy" decoding="async" @error="onCaptureError" />
+      <div v-else-if="device === 'wear'" class="watch-preview" role="img" aria-label="Illustrative Muse Now Playing screen on Wear OS">
         <img :src="thumbnail ? wearPreviewThumbnail : wearPreview" alt="" />
       </div>
       <div v-else class="screen__missing" role="img" :aria-label="`${screenName} capture for ${platformName} is not available`">
-        <img src="/logo.svg" alt="" width="48" height="48" />
+        <img src="/logo.png" alt="" width="48" height="48" />
         <strong>{{ screenName }}</strong><span>Screenshot unavailable</span>
       </div>
     </Transition>

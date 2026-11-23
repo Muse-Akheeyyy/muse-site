@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<{
   platform?: DownloadPlatformKey
   showTrigger?: boolean
 }>(), {
-  label: 'Download Metrolist',
+  label: 'Download Muse',
   buttonClass: 'btn btn-filled',
   showTrigger: true,
 })
@@ -52,9 +52,9 @@ const selectedAsset = computed(() => selectedArchitecture.value
   ? findDownloadAsset(selectedKey.value, selectedArchitecture.value.key, assets.value)
   : undefined)
 const installInstructions = computed(() => selectedKey.value === 'windows' && selectedAsset.value?.name.toLowerCase().endsWith('.zip')
-  ? ['Download the portable ZIP.', 'Extract it to a folder.', 'Run Metrolist from the extracted folder.']
+  ? ['Download the portable ZIP.', 'Extract it to a folder.', 'Run Muse from the extracted folder.']
   : selectedPlatform.value.instructions)
-const releasesUrl = 'https://github.com/MetrolistGroup/Metrolist/releases/latest'
+const releasesUrl = 'https://github.com/Muse-Akheeyyy/Muse/releases/latest'
 
 function selectPlatform(platform: DownloadPlatform) {
   selectedKey.value = platform.key
@@ -149,7 +149,7 @@ function formatSize(bytes?: number) {
   <Teleport to="body">
     <dialog ref="dialog" class="site-dialog download-dialog" :aria-labelledby="titleId" @click="closeOnBackdrop" @close="onClose">
       <div class="download-dialog__header">
-        <h2 :id="titleId">Download Metrolist</h2>
+        <h2 :id="titleId">Download Muse</h2>
         <form method="dialog">
           <button class="icon-button" type="submit" aria-label="Close dialog">
             <span class="material-symbols-rounded" aria-hidden="true">close</span>
@@ -226,7 +226,7 @@ function formatSize(bytes?: number) {
               <button type="button" class="btn btn-tonal" @click="hideNotice">Dismiss notice</button>
             </div>
             <p v-if="donateDeveloper" class="download-dialog__donate" role="status">
-              Enjoying Metrolist? Support the people building it:
+              Enjoying Muse? Support the people building it:
               <a :href="donateDeveloper.url" target="_blank" rel="noopener noreferrer">donate to {{ donateDeveloper.name }}</a>.
             </p>
           </div>

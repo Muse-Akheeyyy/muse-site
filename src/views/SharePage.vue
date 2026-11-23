@@ -19,7 +19,7 @@ const appUrl = computed(() => share.value ? musicAppUrl(share.value, navigator.u
   <main id="main" class="share-page">
     <section class="container share-page__inner" aria-labelledby="share-title">
       <h1 id="share-title">Shared music</h1>
-      <p>Open this in Metrolist, or play it on YouTube Music instead.</p>
+      <p>Open this in Muse, or play it on YouTube Music instead.</p>
 
       <div v-if="!hydrated" class="share-page__loading" role="status" aria-label="Loading shared link">
         <span></span><span></span>
@@ -27,18 +27,18 @@ const appUrl = computed(() => share.value ? musicAppUrl(share.value, navigator.u
       <div v-else-if="share" class="share-page__link">
         <p class="share-page__url">{{ share.youtubeUrl }}</p>
         <div class="share-page__actions">
-          <a :href="appUrl" class="btn btn-filled btn-lg">Open in Metrolist</a>
+          <a :href="appUrl" class="btn btn-filled btn-lg">Open in Muse</a>
           <a :href="share.youtubeUrl" class="btn btn-outlined btn-lg" rel="noreferrer">Open in YouTube Music</a>
         </div>
-        <p>If your browser won’t open Metrolist, grab the app below or listen on YouTube Music.</p>
+        <p>If your browser won’t open Muse, grab the app below or listen on YouTube Music.</p>
       </div>
       <p v-else class="share-page__error" role="status">This link is missing a valid song, playlist, album, or artist ID. Ask whoever sent it to share it again.</p>
-      <noscript>Turn on JavaScript to open this link automatically, or paste it straight into Metrolist.</noscript>
+      <noscript>Turn on JavaScript to open this link automatically, or paste it straight into Muse.</noscript>
 
       <div class="share-page__install">
-        <h2>Don’t have Metrolist?</h2>
+        <h2>Don’t have Muse?</h2>
         <p>Free for Android, iOS, Windows, macOS, and Linux.</p>
-        <DownloadDialog label="Download Metrolist" button-class="btn btn-tonal btn-lg" />
+        <DownloadDialog label="Download Muse" button-class="btn btn-tonal btn-lg" />
       </div>
     </section>
   </main>

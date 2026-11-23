@@ -12,9 +12,9 @@ try {
 
   const index = 'index, follow, max-image-preview:large, max-snippet:-1'
   const expected = [
-    ['', 'Metrolist · Music without the noise', index, 'Music without the noise'],
-    ['faq', 'Metrolist FAQ · Install, sign in, update, and import playlists', index, 'Frequently asked questions'],
-    ['listen?code=ABC123', 'Listen Together · Metrolist', 'noindex, follow', 'Join a listening room'],
+    ['', 'Muse · Music without the noise', index, 'Music without the noise'],
+    ['faq', 'Muse FAQ · Install, sign in, update, and import playlists', index, 'Frequently asked questions'],
+    ['listen?code=ABC123', 'Listen Together · Muse', 'noindex, follow', 'Join a listening room'],
   ]
   for (const [route, title, robots, heading] of expected) {
     const raw = await (await fetch(new URL(route, base))).text()
@@ -30,16 +30,16 @@ try {
   assert.deepEqual(hydrationErrors, [], 'prerendered pages hydrate without mismatches')
 
   await page.goto(new URL('missing-page', base).href, { waitUntil: 'networkidle' })
-  assert.equal(await page.title(), 'Page not found · Metrolist')
+  assert.equal(await page.title(), 'Page not found · Muse')
   assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex, nofollow')
   assert.equal(await page.locator('link[rel="canonical"]').count(), 0)
   assert.equal(await page.locator('h1').innerText(), 'Page not found')
 
   const sitemap = await (await fetch(new URL('sitemap.xml', base))).text()
   for (const path of ['/', '/faq', '/privacy']) {
-    assert.match(sitemap, new RegExp(`<loc>https://metrolist.cc${path}</loc>`), `sitemap lists ${path}`)
+    assert.match(sitemap, new RegExp(`<loc>https://muse-akheeyyy.pages.dev${path}</loc>`), `sitemap lists ${path}`)
   }
-  assert.doesNotMatch(sitemap, /<loc>https:\/\/metrolist\.cc\/listen(?:[/?<])/, 'sitemap omits noindex invitation pages')
+  assert.doesNotMatch(sitemap, /<loc>https:\/\/muse\.cc\/listen(?:[/?<])/, 'sitemap omits noindex invitation pages')
   const schemas = [...(await (await fetch(new URL('', base))).text()).matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map(match => JSON.parse(match[1])['@type'])
   assert.deepEqual(schemas.sort(), ['Organization', 'SoftwareApplication', 'WebSite'])
   await page.goto(base, { waitUntil: 'networkidle' })

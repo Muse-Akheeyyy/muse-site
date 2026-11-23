@@ -20,7 +20,7 @@ function openDownload(platform: DownloadPlatformKey) {
 
   <section id="features" class="features section-band" :class="{ 'is-paused': animationsPaused }" aria-labelledby="features-title">
     <div class="container">
-      <h2 id="features-title" class="sr-only">Metrolist features</h2>
+      <h2 id="features-title" class="sr-only">Muse features</h2>
       <div class="features__grid">
         <article v-for="(feature, index) in features" :key="feature.label" class="features__card" :class="`features__card--${index + 1}`">
           <div class="features__top"><ShapeBackdrop :shape="feature.shape" :color="feature.iconBackground" class="features__icon"><span class="features__icon-glyph material-symbols-rounded" :style="{ color: feature.iconColor }" aria-hidden="true">{{ feature.icon }}</span></ShapeBackdrop><span class="features__label">{{ feature.label }}</span><button v-if="index === 1" type="button" class="lyrics-toggle" :aria-label="animationsPaused ? 'Resume lyrics animation' : 'Pause lyrics animation'" :aria-pressed="animationsPaused" @click="animationsPaused = !animationsPaused"><span class="material-symbols-rounded" aria-hidden="true">{{ animationsPaused ? 'play_arrow' : 'pause' }}</span></button></div>

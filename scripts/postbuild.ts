@@ -29,10 +29,10 @@ const SCREENSHOTS = {
 const ORGANIZATION = {
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
-  name: 'Metrolist',
+  name: 'Muse',
   url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/logo.svg`,
-  sameAs: ['https://github.com/MetrolistGroup', REPO_URL, 'https://hosted.weblate.org/projects/Metrolist/'],
+  logo: `${SITE_URL}/logo.png`,
+  sameAs: ['https://github.com/Muse-Akheeyyy', REPO_URL],
 }
 
 // Schema: https://schema.org/SoftwareApplication
@@ -42,8 +42,8 @@ function app(operatingSystem: string, screenshot: string | string[]) {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     '@id': `${SITE_URL}/#app`,
-    name: 'Metrolist',
-    alternateName: 'Metrolist Music',
+    name: 'Muse',
+    alternateName: 'Muse Music',
     url: `${SITE_URL}/`,
     description: PAGE_META.home.description,
     applicationCategory: 'MultimediaApplication',
@@ -76,7 +76,7 @@ const breadcrumbs = (name: string, path: string) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Metrolist', item: `${SITE_URL}/` },
+    { '@type': 'ListItem', position: 1, name: 'Muse', item: `${SITE_URL}/` },
     { '@type': 'ListItem', position: 2, name, item: `${SITE_URL}${path}` },
   ],
 })
@@ -105,7 +105,7 @@ const pages: Page[] = [
     images: [SCREENSHOTS.desktopHome, SCREENSHOTS.desktop, SCREENSHOTS.android, SCREENSHOTS.ios],
     schemas: [
       // Schema: https://schema.org/WebSite; Google: https://developers.google.com/search/docs/appearance/site-names
-      { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: 'Metrolist', alternateName: ['Metrolist Music', 'metrolist.cc'], url: `${SITE_URL}/`, publisher: { '@id': `${SITE_URL}/#organization` } },
+      { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: 'Muse', alternateName: ['Muse Music', 'muse-akheeyyy.pages.dev'], url: `${SITE_URL}/`, publisher: { '@id': `${SITE_URL}/#organization` } },
       { '@context': 'https://schema.org', ...ORGANIZATION },
       app('Android, iOS, Windows, macOS, Linux', Object.values(SCREENSHOTS)),
     ],
@@ -198,7 +198,7 @@ async function renderPage(page: Page) {
   html = html.replace(/\s*<link rel="discord:component-embed"[^>]*>/, '')
   if (page.embed) html = html.replace('</head>', () => `  <link rel="discord:component-embed" type="application/json" href="${SITE_URL}/${page.embed}" />\n  </head>`)
   if (page.markdown) html = html.replace('</head>', () => `  <link rel="alternate" type="text/markdown" href="/${page.markdown[0]}" />\n  </head>`)
-  if (meta.robots.startsWith('index')) html = html.replace('</head>', () => `  <link rel="alternate" type="application/rss+xml" title="Metrolist guides" href="${SITE_URL}/feed.xml" />\n  </head>`)
+  if (meta.robots.startsWith('index')) html = html.replace('</head>', () => `  <link rel="alternate" type="application/rss+xml" title="Muse guides" href="${SITE_URL}/feed.xml" />\n  </head>`)
   for (const schema of page.schemas ?? []) {
     html = html.replace('</head>', () => `  <script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>\n  </head>`)
   }
@@ -265,16 +265,16 @@ const embed = (path: string, heading: string, body: string, buttons: ReturnType<
 const download = button('Download', `${REPO_URL}/releases/latest`)
 const text = (content: string) => ({ type: 10, content })
 const gallery = [
-  [SCREENSHOTS.desktopHome, 'Metrolist home on desktop'],
-  [SCREENSHOTS.desktop, 'Metrolist player on desktop'],
-  [SCREENSHOTS.android, 'Metrolist player on Android'],
+  [SCREENSHOTS.desktopHome, 'Muse home on desktop'],
+  [SCREENSHOTS.desktop, 'Muse player on desktop'],
+  [SCREENSHOTS.android, 'Muse player on Android'],
 ]
 const home = {
   component: {
     type: 17,
     accent_color: 14268927,
     components: [
-      { type: 9, components: [text(`## [Metrolist](${SITE_URL}/)\nMusic without the noise · Phone to desktop`)], accessory: button('Open', `${SITE_URL}/`) },
+      { type: 9, components: [text(`## [Muse](${SITE_URL}/)\nMusic without the noise · Phone to desktop`)], accessory: button('Open', `${SITE_URL}/`) },
       { type: 12, items: gallery.map(([url, description]) => ({ media: { url }, description })) },
       text('*Home and player on desktop and Android*'),
       { type: 14, divider: true, spacing: 1 },
@@ -286,8 +286,8 @@ const home = {
 }
 const embeds = {
   'discord-embed.json': home,
-  'discord-embed-faq.json': embed('/faq', 'Metrolist FAQ', PAGE_META.faq.description, [download, button('Home', `${SITE_URL}/`)]),
-  'discord-embed-privacy.json': embed('/privacy', 'Metrolist privacy policy', PAGE_META.privacy.description, [button('Home', `${SITE_URL}/`), button('Source', REPO_URL)]),
+  'discord-embed-faq.json': embed('/faq', 'Muse FAQ', PAGE_META.faq.description, [download, button('Home', `${SITE_URL}/`)]),
+  'discord-embed-privacy.json': embed('/privacy', 'Muse privacy policy', PAGE_META.privacy.description, [button('Home', `${SITE_URL}/`), button('Source', REPO_URL)]),
 }
 for (const [file, payload] of Object.entries(embeds)) {
   const json = JSON.stringify(payload)

@@ -8,12 +8,12 @@ These formats make the content easier to find and read. They do not guarantee se
 
 Run `bun run check`, then inspect the build with local Wrangler. Vite development mode does not reproduce the deployed static files or `_headers` rules.
 
-Check the content and source links for the launch version of Metrolist KMP. Keep `GUIDE_REVIEW_DATE` tied to a real review. Do not refresh dates on every build or add a publication date that nobody recorded.
+Check the content and source links for the launch version of Muse. Keep `GUIDE_REVIEW_DATE` tied to a real review. Do not refresh dates on every build or add a publication date that nobody recorded.
 
 ## After deployment
 
 1. Verify the production domain in Google Search Console and Bing Webmaster Tools. Domain verification needs access to the relevant account or DNS settings.
-2. Submit `https://metrolist.cc/sitemap.xml`. Use the inspection tools on a guide URL to check the response, rendered content, canonical URL, and index eligibility.
+2. Submit `https://muse-akheeyyy.pages.dev/sitemap.xml`. Use the inspection tools on a guide URL to check the response, rendered content, canonical URL, and index eligibility.
 3. Run `bun run indexnow` after the new URLs are public. It reads the sitemap and submits those URLs to participating engines. It does not submit to Google or force an engine to index a page.
 4. Check Cloudflare bot and firewall settings. `robots.txt` allows crawling, but a challenge or block at the CDN can still stop a crawler. OpenAI publishes IP ranges for OAI-SearchBot. A request with a copied user-agent alone does not prove those crawler requests can reach the site.
 5. Check search impressions, clicks, and crawl reports after launch. Those reports can show whether discovery improved. A successful build cannot measure that outcome.
@@ -22,10 +22,10 @@ OpenAI uses OAI-SearchBot for search discovery and GPTBot for potential training
 
 ## Public discovery URLs
 
-- `https://metrolist.cc/sitemap.xml` lists indexable HTML pages.
-- `https://metrolist.cc/feed.xml` contains guide links and summaries in RSS 2.0 format. Publication dates are omitted because source-review dates are not publication dates.
-- `https://metrolist.cc/llms.txt` links to the document collection.
-- `https://metrolist.cc/llms-full.txt` combines the page text, with each document naming its HTML source.
+- `https://muse-akheeyyy.pages.dev/sitemap.xml` lists indexable HTML pages.
+- `https://muse-akheeyyy.pages.dev/feed.xml` contains guide links and summaries in RSS 2.0 format. Publication dates are omitted because source-review dates are not publication dates.
+- `https://muse-akheeyyy.pages.dev/llms.txt` links to the document collection.
+- `https://muse-akheeyyy.pages.dev/llms-full.txt` combines the page text, with each document naming its HTML source.
 
 Markdown copies have `noindex` headers and HTTP canonical links to their HTML pages. The HTML pages remain indexable. The sitemap omits modification dates because we do not maintain reliable per-URL dates. Do not use the build time as a substitute.
 

@@ -38,11 +38,11 @@ export function htmlToMarkdown(html: string) {
 }
 
 export function homeMarkdown() {
-  return `# Metrolist
+  return `# Muse
 
 > ${PAGE_META.home.description}
 
-Metrolist is built with Kotlin Multiplatform. Source code: ${REPO} (GPL-3.0).
+Muse is built with Kotlin Multiplatform. Source code: ${REPO} (GPL-3.0).
 
 Source: ${SITE_URL}/
 
@@ -63,7 +63,7 @@ ${platform.instructions.map((step, index) => `${index + 1}. ${step}`).join('\n')
 }
 
 export function faqMarkdown() {
-  return `# Metrolist FAQ
+  return `# Muse FAQ
 
 Source: ${SITE_URL}/faq
 
@@ -145,11 +145,11 @@ ${GUIDE_COLLECTIONS.map(collection => `## ${escapeMarkdown(collection.heading)}\
 }
 
 export function llmsTxt() {
-  return `# Metrolist
+  return `# Muse
 
 > ${PAGE_META.home.description}
 
-Metrolist is free and open source (GPL-3.0). It is not affiliated with YouTube or Google, and it is not published on the Play Store; official builds come only from GitHub Releases.
+Muse is free and open source (GPL-3.0). It is not affiliated with YouTube or Google, and it is not published on the Play Store; official builds come only from GitHub Releases.
 
 ${HOSTING_NOTICE}
 
@@ -160,7 +160,7 @@ Each Markdown page names its canonical HTML source.
 - [Overview](${SITE_URL}/index.md): features, supported platforms, and install steps
 - [FAQ](${SITE_URL}/faq.md): platforms, migration, accounts, safety, updates, and imports
 - [Lyrics sync](${SITE_URL}/sync.md): time lyrics in the browser and export MLX, LRC, Enhanced LRC, or TTML
-- [Privacy policy](${SITE_URL}/privacy.md): app data, optional Sentry diagnostics, and website hosting
+- [Privacy policy](${SITE_URL}/privacy.md): app data, diagnostics, and website hosting
 - [Guides](${SITE_URL}/guides.md): ${markdownLink('HTML topic index', `${SITE_URL}/guides`)} for comparisons, installation, library, and playback
 ${GUIDES.map(guide => `- ${markdownLink(guide.heading, `${SITE_URL}/guides/${guide.slug}.md`)}: ${escapeMarkdown(guide.meta.description)}`).join('\n')}
 - [Guide feed](${SITE_URL}/feed.xml): RSS links and summaries for every guide
@@ -171,7 +171,6 @@ ${GUIDES.map(guide => `- ${markdownLink(guide.heading, `${SITE_URL}/guides/${gui
 - [Source code](${REPO})
 - [Latest release](${REPO}/releases/latest)
 - [Issue tracker](${REPO}/issues)
-- [Translations](https://hosted.weblate.org/projects/Metrolist/)
 `
 }
 

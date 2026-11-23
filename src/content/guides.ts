@@ -19,34 +19,34 @@ export type Guide = {
 }
 
 export const GUIDE_INDEX_META: PageMeta = {
-  title: 'YouTube Music app guides · Metrolist',
-  description: 'Pick the right YouTube Music app, install Metrolist on your phone or computer, and get help with offline downloads, Spotify imports, synced lyrics, and listening rooms.',
+  title: 'YouTube Music app guides · Muse',
+  description: 'Pick the right YouTube Music app, install Muse on your phone or computer, and get help with offline downloads, Spotify imports, synced lyrics, and listening rooms.',
   robots: PAGE_META.home.robots,
 }
 
 export const GUIDE_REVIEW_DATE = '2026-10-25'
-export const GUIDE_DISCLOSURE = 'Written by the Metrolist project. Third-party YouTube clients may violate YouTube’s Terms of Service and carry account risks.'
+export const GUIDE_DISCLOSURE = 'Written by the Muse project. Third-party YouTube clients may violate YouTube’s Terms of Service and carry account risks.'
 
 const COMPARISON_GUIDES: readonly Guide[] = [
   {
-    slug: 'metrolist-vs-archivetune',
-    heading: 'Metrolist vs ArchiveTune',
+    slug: 'muse-vs-archivetune',
+    heading: 'Muse vs ArchiveTune',
     meta: {
-      title: 'Metrolist vs ArchiveTune · Platforms and features',
-      description: 'How Metrolist and ArchiveTune compare on device support, local files, lyrics, audio controls, playlist imports, and setup.',
+      title: 'Muse vs ArchiveTune · Platforms and features',
+      description: 'How Muse and ArchiveTune compare on device support, local files, lyrics, audio controls, playlist imports, and setup.',
       robots: PAGE_META.home.robots,
     },
-    intro: 'Both Metrolist and ArchiveTune are open-source YouTube Music apps. In fact, ArchiveTune grew out of Metrolist. The main split comes down to where you listen and whether you play local files.',
+    intro: 'Both Muse and ArchiveTune are open-source YouTube Music apps. In fact, ArchiveTune grew out of Muse. The main split comes down to where you listen and whether you play local files.',
     sections: [
       {
         id: 'devices',
         heading: 'Start with the devices you use',
         paragraphs: [
-          'Metrolist is built with Kotlin Multiplatform, so you get apps for Android 7+, iOS 17+, Windows 10+, macOS 15+ (Apple silicon and Intel), and Linux. If you want the same player on both your phone and your computer, Metrolist covers all of them. Exact features like casting can still vary slightly by platform, so check the release notes for your build.',
-          'ArchiveTune focuses on Android, built with Kotlin and Jetpack Compose. If you only listen on Android, it’s easy to try both side by side. If you need an iPhone, iPad, or desktop app, start with Metrolist.',
+          'Muse is built with Kotlin Multiplatform, so you get apps for Android 7+, iOS 17+, Windows 10+, macOS 15+ (Apple silicon and Intel), and Linux. If you want the same player on both your phone and your computer, Muse covers all of them. Exact features like casting can still vary slightly by platform, so check the release notes for your build.',
+          'ArchiveTune focuses on Android, built with Kotlin and Jetpack Compose. If you only listen on Android, it’s easy to try both side by side. If you need an iPhone, iPad, or desktop app, start with Muse.',
         ],
         links: [
-          { label: 'Metrolist repository and supported platforms', href: 'https://github.com/MetrolistGroup/Metrolist' },
+          { label: 'Muse repository and supported platforms', href: 'https://github.com/Muse-Akheeyyy/Muse' },
           { label: 'ArchiveTune on GitHub', href: 'https://github.com/rukamori/ArchiveTune' },
         ],
       },
@@ -54,11 +54,11 @@ const COMPARISON_GUIDES: readonly Guide[] = [
         id: 'playback',
         heading: 'Playback controls and lyrics',
         paragraphs: [
-          'Both apps give you ad-free background play, synced lyrics, translations, and romanization (when a track has them). Metrolist also includes offline downloads and Listen Together rooms, where friends can suggest songs and stay in sync during a shared session.',
-          'ArchiveTune stands out on Android if you also keep local music files on your phone. It includes local-file playback, EBU R128 loudness normalization, crossfade, tempo and pitch controls, system equalizer support, and a bunch of player themes and gesture options. Metrolist has normalization, tempo and pitch controls, an equalizer, and its own player customization too, so it’s worth trying the specific controls you care about in each app.',
+          'Both apps give you ad-free background play, synced lyrics, translations, and romanization (when a track has them). Muse also includes offline downloads and Listen Together rooms, where friends can suggest songs and stay in sync during a shared session.',
+          'ArchiveTune stands out on Android if you also keep local music files on your phone. It includes local-file playback, EBU R128 loudness normalization, crossfade, tempo and pitch controls, system equalizer support, and a bunch of player themes and gesture options. Muse has normalization, tempo and pitch controls, an equalizer, and its own player customization too, so it’s worth trying the specific controls you care about in each app.',
         ],
         links: [
-          { label: 'Metrolist features and overview', href: 'https://metrolist.cc/' },
+          { label: 'Muse features and overview', href: 'https://muse-akheeyyy.pages.dev/' },
           { label: 'ArchiveTune feature list', href: 'https://github.com/rukamori/ArchiveTune#features' },
         ],
       },
@@ -66,20 +66,20 @@ const COMPARISON_GUIDES: readonly Guide[] = [
         id: 'library',
         heading: 'Accounts, imports, and moving your library',
         paragraphs: [
-          'In Metrolist, you can start listening without signing in, or connect your YouTube Music account whenever you want your playlists and library. ArchiveTune supports switching between multiple accounts and syncing playlists, liked songs, and subscriptions. Both support Spotify playlist import, Last.fm, ListenBrainz, and Discord Rich Presence. When you import a Spotify playlist into Metrolist, it matches each track on YouTube Music, so give it a quick skim in case a song is missing or pulled a live version.',
-          'To move your Metrolist library to another device, create a backup and restore it there. Backups skip downloaded audio files, and restoring overwrites the destination library, so back that one up first if you need it. Keep backup files private too, since they can hold account credentials.',
+          'In Muse, you can start listening without signing in, or connect your YouTube Music account whenever you want your playlists and library. ArchiveTune supports switching between multiple accounts and syncing playlists, liked songs, and subscriptions. Both support Spotify playlist import, Last.fm, ListenBrainz, and Discord Rich Presence. When you import a Spotify playlist into Muse, it matches each track on YouTube Music, so give it a quick skim in case a song is missing or pulled a live version.',
+          'To move your Muse library to another device, create a backup and restore it there. Backups skip downloaded audio files, and restoring overwrites the destination library, so back that one up first if you need it. Keep backup files private too, since they can hold account credentials.',
         ],
-        links: [{ label: 'Metrolist library and backup FAQ', href: 'https://metrolist.cc/faq' }],
+        links: [{ label: 'Muse library and backup FAQ', href: 'https://muse-akheeyyy.pages.dev/faq' }],
       },
       {
         id: 'decision',
         heading: 'Which one should you try?',
         paragraphs: [
-          'Go with Metrolist if you want one app across mobile and desktop, or if you listen with friends in Listen Together rooms. Try ArchiveTune if you’re on Android and want local-file playback, crossfade, and extra player themes. Whichever you pick, download from official releases and back up your library first. On Android, newer Metrolist KMP builds install separately from the older Android app. Restore your backup and check everything before uninstalling the old one.',
+          'Go with Muse if you want one app across mobile and desktop, or if you listen with friends in Listen Together rooms. Try ArchiveTune if you’re on Android and want local-file playback, crossfade, and extra player themes. Whichever you pick, download from official releases and back up your library first. On Android, newer Muse KMP builds install separately from the older Android app. Restore your backup and check everything before uninstalling the old one.',
           'Remember that both are third-party clients: using them with YouTube may violate YouTube’s Terms of Service, and Premium-only audio quality still requires your own YouTube Music Premium subscription.',
         ],
         links: [
-          { label: 'Metrolist releases', href: 'https://github.com/MetrolistGroup/Metrolist/releases' },
+          { label: 'Muse releases', href: 'https://github.com/Muse-Akheeyyy/Muse/releases' },
           { label: 'ArchiveTune releases', href: 'https://github.com/rukamori/ArchiveTune/releases' },
           { label: 'YouTube Terms of Service', href: 'https://www.youtube.com/static?template=terms' },
         ],
@@ -87,26 +87,26 @@ const COMPARISON_GUIDES: readonly Guide[] = [
     ],
   },
   {
-    slug: 'metrolist-vs-youtube-music',
-    heading: 'Metrolist vs YouTube Music',
+    slug: 'muse-vs-youtube-music',
+    heading: 'Muse vs YouTube Music',
     meta: {
-      title: 'Metrolist vs YouTube Music · Features and membership',
-      description: 'How Metrolist compares with the official YouTube Music app on ads, background play, offline downloads, device support, and account trade-offs.',
+      title: 'Muse vs YouTube Music · Features and membership',
+      description: 'How Muse compares with the official YouTube Music app on ads, background play, offline downloads, device support, and account trade-offs.',
       robots: PAGE_META.home.robots,
     },
-    intro: 'Metrolist is a free, open-source player for YouTube Music. Here’s how it stacks up against the official app: where a third-party client shines, and where the official app still wins.',
+    intro: 'Muse is a free, open-source player for YouTube Music. Here’s how it stacks up against the official app: where a third-party client shines, and where the official app still wins.',
     sections: [
       {
         id: 'membership',
         heading: 'Playback and Music Premium',
         paragraphs: [
           'In the official YouTube Music app, ad-free music, background play, and offline music downloads require a Music Premium subscription. Podcasts work a little differently: many play in the background or download for free, though they can still carry host-read or inserted ads. Exact perks vary by country and device.',
-          'Metrolist gives you ad-free background playback and lets you listen without even signing in. It doesn’t replace a paid subscription, though: it can’t unlock region-locked tracks, and Premium-only audio quality still requires your own YouTube Music Premium account.',
+          'Muse gives you ad-free background playback and lets you listen without even signing in. It doesn’t replace a paid subscription, though: it can’t unlock region-locked tracks, and Premium-only audio quality still requires your own YouTube Music Premium account.',
         ],
         links: [
           { label: 'YouTube Music Premium benefits and podcast exceptions', href: 'https://support.google.com/youtubemusic/answer/9266556?hl=en' },
           { label: 'Official background playback help', href: 'https://support.google.com/youtubemusic/answer/6313552?hl=en' },
-          { label: 'Metrolist overview and service notice', href: 'https://metrolist.cc/' },
+          { label: 'Muse overview and service notice', href: 'https://muse-akheeyyy.pages.dev/' },
         ],
       },
       {
@@ -114,35 +114,35 @@ const COMPARISON_GUIDES: readonly Guide[] = [
         heading: 'Offline downloads for trips',
         paragraphs: [
           'The official app lets Music Premium subscribers download songs and playlists, as long as you reconnect to the internet at least once every 30 days to keep them active. Podcasts follow separate rules and some can’t be downloaded.',
-          'Metrolist lets you download songs and playlists on Android, iOS, and desktop. Just make sure they finish before you lose signal. Note that Metrolist backups copy your library and settings, not the downloaded audio itself, so you’ll need to re-download tracks on a new device. Restoring a backup also replaces the library already on that device, so back it up first if needed.',
+          'Muse lets you download songs and playlists on Android, iOS, and desktop. Just make sure they finish before you lose signal. Note that Muse backups copy your library and settings, not the downloaded audio itself, so you’ll need to re-download tracks on a new device. Restoring a backup also replaces the library already on that device, so back it up first if needed.',
         ],
         links: [
           { label: 'Official music and podcast download rules', href: 'https://support.google.com/youtubemusic/answer/6313535?hl=en' },
-          { label: 'Metrolist offline listening and backup FAQ', href: 'https://metrolist.cc/faq' },
+          { label: 'Muse offline listening and backup FAQ', href: 'https://muse-akheeyyy.pages.dev/faq' },
         ],
       },
       {
         id: 'devices',
         heading: 'Speakers, cars, and other devices',
         paragraphs: [
-          'Metrolist runs on Android, iOS, Windows, macOS, and Linux, with synced lyrics, playback controls, and Listen Together rooms. Casting is built in (Chromecast, DLNA, FCast), though support depends on your platform and speaker, so test it on your own setup first. On iOS, you’ll also need to sideload the IPA.',
+          'Muse runs on Android, iOS, Windows, macOS, and Linux, with synced lyrics, playback controls, and Listen Together rooms. Casting is built in (Chromecast, DLNA, FCast), though support depends on your platform and speaker, so test it on your own setup first. On iOS, you’ll also need to sideload the IPA.',
           'If seamless support for smart speakers, TVs, game consoles, or car infotainment systems is your top priority, check YouTube Music’s official supported-device list before switching.',
         ],
         links: [
           { label: 'YouTube Music supported devices', href: 'https://support.google.com/youtubemusic/answer/9231765?hl=en' },
-          { label: 'Metrolist platform releases', href: 'https://github.com/MetrolistGroup/Metrolist/releases' },
+          { label: 'Muse platform releases', href: 'https://github.com/Muse-Akheeyyy/Muse/releases' },
         ],
       },
       {
         id: 'choice',
         heading: 'Picking what fits you best',
         paragraphs: [
-          'Metrolist is a great fit if you want an open-source app, optional sign-in, Listen Together rooms, and deeper audio controls. The trade-off is that any third-party client relies on YouTube: upstream changes can temporarily break playback, and using one may violate YouTube’s Terms of Service. Being open source makes the code auditable, not immune to account risk.',
+          'Muse is a great fit if you want an open-source app, optional sign-in, Listen Together rooms, and deeper audio controls. The trade-off is that any third-party client relies on YouTube: upstream changes can temporarily break playback, and using one may violate YouTube’s Terms of Service. Being open source makes the code auditable, not immune to account risk.',
           'Stick with the official app if guaranteed device integrations and official support matter most to you. Music Premium covers music only, while YouTube Premium bundles ad-free YouTube video too. Check local pricing directly in Google’s help pages.',
         ],
         links: [
           { label: 'Music Premium vs YouTube Premium', href: 'https://support.google.com/youtubemusic/answer/6305537?hl=en' },
-          { label: 'Metrolist project and notices', href: 'https://github.com/MetrolistGroup/Metrolist' },
+          { label: 'Muse project and notices', href: 'https://github.com/Muse-Akheeyyy/Muse' },
           { label: 'YouTube Terms of Service', href: 'https://www.youtube.com/static?template=terms' },
         ],
       },
@@ -152,20 +152,20 @@ const COMPARISON_GUIDES: readonly Guide[] = [
     slug: 'youtube-music-alternatives',
     heading: '10 YouTube Music clients and alternatives',
     meta: {
-      title: '10 YouTube Music clients and alternatives · Metrolist',
-      description: 'A straightforward look at Metrolist, ArchiveTune, InnerTune, SimpMusic, Harmony Music, Musify, ViTune, Spotube, NewPipe, and FreeTube with links to each project.',
+      title: '10 YouTube Music clients and alternatives · Muse',
+      description: 'A straightforward look at Muse, ArchiveTune, InnerTune, SimpMusic, Harmony Music, Musify, ViTune, Spotube, NewPipe, and FreeTube with links to each project.',
       robots: PAGE_META.home.robots,
     },
-    intro: 'Metrolist is first because it’s our app, but there are plenty of great open-source players out there. Here’s a quick rundown of ten options, from dedicated music clients to general YouTube players, with links straight to their repos.',
+    intro: 'Muse is first because it’s our app, but there are plenty of great open-source players out there. Here’s a quick rundown of ten options, from dedicated music clients to general YouTube players, with links straight to their repos.',
     sections: [
       {
-        id: 'metrolist',
-        heading: 'Metrolist',
+        id: 'muse',
+        heading: 'Muse',
         paragraphs: [
-          'Metrolist is our Kotlin Multiplatform YouTube Music player for Android 7+, iOS 17+, Windows 10+, macOS 15+ (Apple silicon and Intel), and Linux. It gives you no-login listening, ad-free background play, word-synced lyrics, offline downloads, and Listen Together rooms.',
+          'Muse is our Kotlin Multiplatform YouTube Music player for Android 7+, iOS 17+, Windows 10+, macOS 15+ (Apple silicon and Intel), and Linux. It gives you no-login listening, ad-free background play, word-synced lyrics, offline downloads, and Listen Together rooms.',
           'It’s a strong pick if you want the same music app on your phone and computer, or if you listen with friends. Casting varies by build and hardware, and moving your local library between devices uses manual backup and restore (without downloaded audio). Premium-only audio quality still requires your own YouTube Music Premium subscription.',
         ],
-        links: [{ label: 'Metrolist on GitHub', href: 'https://github.com/MetrolistGroup/Metrolist' }],
+        links: [{ label: 'Muse on GitHub', href: 'https://github.com/Muse-Akheeyyy/Muse' }],
       },
       {
         id: 'archivetune',

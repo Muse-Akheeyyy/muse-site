@@ -51,7 +51,7 @@ globalThis.document = {
   createElement: element,
 }
 globalThis.window = {
-  location: { href: 'https://metrolist.cc/listen?code=invite%2B123#room', assign: url => assigned.push(url), reload: () => reloads++ },
+  location: { href: 'https://muse-akheeyyy.pages.dev/listen?code=invite%2B123#room', assign: url => assigned.push(url), reload: () => reloads++ },
   matchMedia: () => ({ matches: reducedMotion }),
   addEventListener(name, callback, options) { events.set(name, callback); listenerOptions.set(name, options) },
 }
@@ -79,7 +79,7 @@ assert.equal(body.children[0].attributes.get('role'), 'alert')
 assert.equal(reloads, 0, 'early failure must not reload automatically')
 body.children[0].children[1].events.get('click')()
 assert.equal(reloads, 1, 'early recovery must offer manual reload without main.ts')
-assert.equal(window.location.href, 'https://metrolist.cc/listen?code=invite%2B123#room')
+assert.equal(window.location.href, 'https://muse-akheeyyy.pages.dev/listen?code=invite%2B123#room')
 body.children.length = 0
 nodes.delete('page-load-error')
 reloads = 0
@@ -189,7 +189,7 @@ assert.equal(document.body.children.length, 1, 'report overlapping failures only
 const retry = document.body.children[0].children[1]
 retry.events.get('click')()
 assert.equal(reloads, 1)
-assert.equal(window.location.href, 'https://metrolist.cc/listen?code=invite%2B123#room')
+assert.equal(window.location.href, 'https://muse-akheeyyy.pages.dev/listen?code=invite%2B123#room')
 assert.equal(assigned.length, assignedCount, 'reload must preserve the requested URL')
 
 body.children.length = 0

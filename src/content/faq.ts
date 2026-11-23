@@ -16,15 +16,15 @@ export type FaqItem = {
 export const FAQ_ITEMS: FaqItem[] = [
   {
     topic: 'installation',
-    question: 'Which platforms does Metrolist run on?',
+    question: 'Which platforms does Muse run on?',
     guide: { label: 'Compare clients and install guides', href: '/guides' },
-    answer: 'Metrolist works on Android 7 and newer, iOS 17 and newer, Linux (x64 and ARM64), macOS 15 and newer (Apple silicon and Intel), and Windows 10 and newer (x64 and ARM64). Pick your device in the download window to get the right file.',
+    answer: 'Muse works on Android 7 and newer, iOS 17 and newer, Linux (x64 and ARM64), macOS 15 and newer (Apple silicon and Intel), and Windows 10 and newer (x64 and ARM64). Pick your device in the download window to get the right file.',
   },
   {
     topic: 'installation',
-    question: 'Can I move over from the original Metrolist app?',
-    guide: { label: 'Switching to Metrolist KMP on Android', href: '/guides/best-youtube-music-client-android-2026#switching-apps' },
-    answer: 'Yes. Just make a backup in the original Android app first. Current KMP builds install separately alongside it, so install the KMP app, restore your backup, and keep the original until you’ve checked your library.',
+    question: 'Can I move over from Metrolist?',
+    guide: { label: 'Switching clients on Android', href: '/guides/best-youtube-music-client-android-2026#switching-apps' },
+    answer: 'Yes. Muse installs as a separate app with its own package, so it sits alongside Metrolist instead of replacing it. Make a backup in Metrolist first (Settings > Backup & import), install Muse, then restore that backup. Keep the old install until you have checked your library.',
   },
   {
     topic: 'library',
@@ -34,34 +34,34 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     topic: 'privacy',
-    question: 'Is Metrolist safe to use?',
-    answer: 'Metrolist is open source under GPL-3.0, so anyone can read the code. That said, using a third-party client may go against YouTube’s Terms of Service. We haven’t heard of any bans or restrictions, but that does not guarantee your account is completely safe. Use Metrolist at your own risk.',
+    question: 'Is Muse safe to use?',
+    answer: 'Muse is open source under GPL-3.0, so anyone can read the code. That said, using a third-party client may go against YouTube’s Terms of Service. We haven’t heard of any bans or restrictions, but that does not guarantee your account is completely safe. Use Muse at your own risk.',
   },
   {
     topic: 'privacy',
-    question: 'Does Metrolist host or pirate music?',
+    question: 'Does Muse host or pirate music?',
     answer: `No. ${HOSTING_NOTICE}`,
   },
   {
     topic: 'installation',
-    question: 'How do I update Metrolist?',
+    question: 'How do I update Muse?',
     answer: 'Use the built-in updater when your platform has one, or grab the newest release from GitHub Releases and install it over your current copy.',
   },
   {
     topic: 'installation',
-    question: 'Why isn’t Metrolist on the Play Store?',
-    answer: 'Google doesn’t allow third-party YouTube clients on the Play Store, so any “Metrolist” app you find there is an unofficial copy uploaded by someone else. If you installed one, back up anything you want to keep, uninstall it, report the listing, and download the real build from this site.',
+    question: 'Why isn’t Muse on the Play Store?',
+    answer: 'Google doesn’t allow third-party YouTube clients on the Play Store, so any “Muse” app you find there is an unofficial copy uploaded by someone else. If you installed one, back up anything you want to keep, uninstall it, report the listing, and download the real build from this site.',
   },
   {
     topic: 'library',
     question: 'Can I import my Spotify playlists?',
-    guide: { label: 'How to import a Spotify playlist', href: '/guides/import-spotify-playlists-metrolist' },
-    answer: 'Yes. Go to Settings > Backup & import and paste a Spotify playlist link. Metrolist searches YouTube Music for matching tracks, so give the playlist a quick check in case a song is missing or pulled a different version.',
+    guide: { label: 'How to import a Spotify playlist', href: '/guides/import-spotify-playlists-muse' },
+    answer: 'Yes. Go to Settings > Backup & import and paste a Spotify playlist link. Muse searches YouTube Music for matching tracks, so give the playlist a quick check in case a song is missing or pulled a different version.',
   },
   {
     topic: 'installation',
     question: 'Is there an iOS version?',
-    guide: { label: 'Install Metrolist on iPhone or iPad', href: '/guides/metrolist-ios-iphone' },
+    guide: { label: 'Install Muse on iPhone or iPad', href: '/guides/muse-ios-iphone' },
     answer: 'Yes. Grab the IPA from the download window and sideload it using AltStore, SideStore, or Sideloadly.',
   },
   {
@@ -73,7 +73,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     topic: 'library',
     question: 'Can I listen offline?',
-    guide: { label: 'How offline downloads work', href: '/guides/metrolist-offline-downloads' },
+    guide: { label: 'How offline downloads work', href: '/guides/muse-offline-downloads' },
     answer: 'Yes. Download songs or playlists while you’re online, wait for them to finish, and you can play them without an internet connection on Android, iOS, or desktop.',
   },
 ]

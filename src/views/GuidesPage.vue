@@ -85,7 +85,7 @@ const reviewDate = new Intl.DateTimeFormat('en-US', {
       </div>
 
       <section v-if="guide" class="guides-page__next" aria-labelledby="guides-download-title">
-        <h2 id="guides-download-title">Want to try Metrolist?</h2>
+        <h2 id="guides-download-title">Want to try Muse?</h2>
         <p>Check out the <RouterLink :to="{ path: '/', hash: '#desktop' }">app previews</RouterLink> or <RouterLink to="/faq">read the FAQ</RouterLink> for install steps and account details.</p>
         <DownloadDialog />
       </section>

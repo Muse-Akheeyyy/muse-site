@@ -2,7 +2,7 @@ import { expect, test } from 'bun:test'
 import { GUIDE_COLLECTIONS, GUIDE_DISCLOSURE, GUIDE_INDEX_META, GUIDE_REVIEW_DATE, GUIDES, getRelatedGuides } from '../src/content/guides'
 
 const appSources = {
-  Metrolist: 'https://github.com/MetrolistGroup/Metrolist',
+  Muse: 'https://github.com/Muse-Akheeyyy/Muse',
   ArchiveTune: 'https://github.com/rukamori/ArchiveTune',
   InnerTune: 'https://github.com/z-huang/InnerTune',
   SimpMusic: 'https://github.com/maxrave-dev/SimpMusic',
@@ -19,17 +19,17 @@ const safeId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 test('guides preserve existing routes and have unique, indexable metadata', () => {
   const slugs = GUIDES.map(guide => guide.slug)
   expect(slugs).toEqual(expect.arrayContaining([
-    'metrolist-vs-archivetune',
-    'metrolist-vs-youtube-music',
+    'muse-vs-archivetune',
+    'muse-vs-youtube-music',
     'youtube-music-alternatives',
     'best-youtube-music-client-android-2026',
     'youtube-music-desktop-clients',
-    'metrolist-ios-iphone',
-    'metrolist-offline-downloads',
-    'import-spotify-playlists-metrolist',
+    'muse-ios-iphone',
+    'muse-offline-downloads',
+    'import-spotify-playlists-muse',
     'youtube-music-without-google-account',
-    'metrolist-listen-together',
-    'metrolist-synced-lyrics',
+    'muse-listen-together',
+    'muse-synced-lyrics',
   ]))
   expect(new Set(slugs).size).toBe(GUIDES.length)
   expect(new Set(GUIDES.map(guide => guide.heading)).size).toBe(GUIDES.length)
@@ -71,7 +71,7 @@ test('articles have content, safe unique anchors, and official HTTPS sources', (
           expect(Object.values(appSources)).toContain(`${url.origin}/${url.pathname.split('/').slice(1, 3).join('/')}`)
         } else {
           expect([
-            'https://metrolist.cc', 'https://support.google.com', 'https://www.youtube.com',
+            'https://muse-akheeyyy.pages.dev', 'https://support.google.com', 'https://www.youtube.com',
             'https://faq.altstore.io', 'https://docs.sidestore.io', 'https://sideloadly.io',
             'https://developer.apple.com', 'https://policies.google.com', 'https://support.spotify.com',
           ]).toContain(url.origin)
@@ -108,7 +108,7 @@ test('alternatives contain exactly ten distinct apps with their own official sou
 test('source review date is a real calendar date and publisher and account risks remain disclosed', () => {
   expect(GUIDE_REVIEW_DATE).toMatch(/^\d{4}-\d{2}-\d{2}$/)
   expect(new Date(`${GUIDE_REVIEW_DATE}T00:00:00Z`).toISOString().slice(0, 10)).toBe(GUIDE_REVIEW_DATE)
-  expect(GUIDE_DISCLOSURE).toContain('Written by the Metrolist project')
+  expect(GUIDE_DISCLOSURE).toContain('Written by the Muse project')
   expect(GUIDE_DISCLOSURE).toMatch(/Terms of Service.*account risks/)
   expect(JSON.stringify([GUIDE_INDEX_META, GUIDE_DISCLOSURE, GUIDES])).not.toMatch(/wear\s*os/i)
 })

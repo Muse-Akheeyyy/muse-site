@@ -96,7 +96,7 @@ for (const ending of [' />', '/>', '>']) {
         expect(html).toContain(`<link rel="modulepreload" crossorigin href="/assets/${file}.js" />`)
         if (meta.robots.startsWith('index')) {
           expect(html).toContain(`<link rel="alternate" type="text/markdown" href="/${file}.md" />`)
-          expect(html).toContain(`<link rel="alternate" type="application/rss+xml" title="Metrolist guides" href="${SITE_URL}/feed.xml" />`)
+          expect(html).toContain(`<link rel="alternate" type="application/rss+xml" title="Muse guides" href="${SITE_URL}/feed.xml" />`)
         } else {
           expect(html).not.toContain('application/rss+xml')
         }
@@ -130,7 +130,7 @@ for (const ending of [' />', '/>', '>']) {
             expect(pageSchemas[0].dateModified).toBe(GUIDE_REVIEW_DATE)
             for (const role of ['author', 'publisher']) {
               expect(pageSchemas[0][role]['@type']).toBe('Organization')
-              expect(pageSchemas[0][role].name).toBe('Metrolist')
+              expect(pageSchemas[0][role].name).toBe('Muse')
             }
             expect(await readFile(join(dist, `${file}.md`), 'utf8')).toBe(expectedMarkdown[guide.slug])
           } else {

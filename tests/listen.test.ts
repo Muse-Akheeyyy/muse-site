@@ -27,7 +27,7 @@ test('rejects malformed, ambiguous, control-containing and oversized invitations
 
 test('uses the KMP party scheme registered on mobile and desktop', () => {
   for (const code of ['ABC123', 'room1234', 'listentogetherid', 'room_id-1']) {
-    expect(listenAppUrl(code)).toBe(`metrolist://party?r=${code}`)
+    expect(listenAppUrl(code)).toBe(`muse://party?r=${code}`)
   }
   expect(listenAppUrl('ABC123/evil')).toBe('')
   expect(listenAppUrl('ROOM1234\n')).toBe('')

@@ -276,7 +276,7 @@ export function parseLrc(text: string): LyricsDocument {
   return document
 }
 
-// Legacy Metrolist text MLX.
+// Legacy Muse text MLX.
 const mlxLine = /^\[(\d+:\d{2}(?:[.:]\d{1,3})?)(?:~(\d+:\d{2}(?:[.:]\d{1,3})?))?(?:\|([^\]|]+))?](.*)$/
 const mlxPart = /^\[(?:part|songpart):?(?:(\d+:\d{2}(?:[.:]\d{1,3})?)(?:~(\d+:\d{2}(?:[.:]\d{1,3})?))?)?]\s*(.*)$/i
 const mlxBackground = /\s*\[bg:(.*)]$/

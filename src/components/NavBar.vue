@@ -28,9 +28,9 @@ onBeforeUnmount(() => document.removeEventListener('pointerdown', onPointerDown,
 <template>
   <header ref="header" class="navbar" @focusout="closeOutside($event.relatedTarget)" @keydown.esc="isMenuOpen = false; menuButton?.focus()">
     <div class="container navbar__inner">
-      <RouterLink to="/" class="navbar__brand" aria-label="Metrolist home" @click="isMenuOpen = false">
-        <img class="navbar__brand-mark" src="/logo.svg" alt="" width="58" height="58" />
-        <span>Metrolist</span>
+      <RouterLink to="/" class="navbar__brand" aria-label="Muse home" @click="isMenuOpen = false">
+        <img class="navbar__brand-mark" src="/logo.png" alt="" width="58" height="58" />
+        <span>Muse</span>
       </RouterLink>
 
       <nav class="navbar__links" aria-label="Main">

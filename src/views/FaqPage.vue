@@ -64,7 +64,7 @@ const topicGroups = FAQ_TOPICS.map(topic => ({
           </section>
 
           <footer class="faq-page__support">
-            <a href="https://github.com/MetrolistGroup/Metrolist/issues" target="_blank" rel="noopener noreferrer">Report an issue on GitHub</a>
+            <a href="https://github.com/Muse-Akheeyyy/Muse/issues" target="_blank" rel="noopener noreferrer">Report an issue on GitHub</a>
             <RouterLink :to="{ path: '/faq', hash: '#main' }">Back to top</RouterLink>
           </footer>
         </div>

@@ -19,11 +19,11 @@ export function musicShareFromUrl(value: string, depth = 0): MusicShare | null {
   }
   const host = url.hostname.toLowerCase()
   if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) return null
-  const metrolist = host === 'metrolist.cc' || host.endsWith('.metrolist.cc') || host === 'localhost' || host === '127.0.0.1'
-  if (!metrolist && !['music.youtube.com', 'youtube.com', 'www.youtube.com', 'youtu.be'].includes(host)) return null
+  const muse = host === 'muse-akheeyyy.pages.dev' || host.endsWith('.muse-akheeyyy.pages.dev') || host === 'localhost' || host === '127.0.0.1'
+  if (!muse && !['music.youtube.com', 'youtube.com', 'www.youtube.com', 'youtu.be'].includes(host)) return null
 
   const singleParam = (name: string) => url.searchParams.getAll(name).length === 1 ? url.searchParams.get(name) : null
-  if (metrolist && url.pathname === '/open') {
+  if (muse && url.pathname === '/open') {
     const target = singleParam('url')
     return target ? musicShareFromUrl(target, depth + 1) : null
   }
@@ -53,11 +53,11 @@ export function musicShareFromUrl(value: string, depth = 0): MusicShare | null {
 }
 
 export function musicAppUrl(share: MusicShare, userAgent: string, maxTouchPoints: number): string {
-  if (share.kind === 'song') return `metrolist://watch?v=${share.id}`
+  if (share.kind === 'song') return `muse://watch?v=${share.id}`
   if (share.kind === 'playlist') {
     // MobileRoutes uses a path ID on iOS; Android and desktop parse YouTube's list parameter.
     const ios = /iphone|ipad|ipod/i.test(userAgent) || (/macintosh/i.test(userAgent) && maxTouchPoints > 1)
-    return ios ? `metrolist://playlist/${share.id}` : `metrolist://playlist?list=${share.id}`
+    return ios ? `muse://playlist/${share.id}` : `muse://playlist?list=${share.id}`
   }
-  return `metrolist://${share.kind}/${share.id}`
+  return `muse://${share.kind}/${share.id}`
 }

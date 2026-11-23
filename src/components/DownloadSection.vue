@@ -11,8 +11,8 @@ import DownloadDialog from './DownloadDialog.vue'
           <p>Grab the latest build for your device straight from GitHub Releases.</p>
         </div>
         <div class="download__actions">
-          <DownloadDialog label="Download Metrolist" button-class="btn btn-filled btn-lg" />
-          <a href="https://github.com/MetrolistGroup/Metrolist" class="btn btn-outlined" target="_blank" rel="noopener noreferrer">
+          <DownloadDialog label="Download Muse" button-class="btn btn-filled btn-lg" />
+          <a href="https://github.com/Muse-Akheeyyy/Muse" class="btn btn-outlined" target="_blank" rel="noopener noreferrer">
             <span class="material-symbols-rounded" aria-hidden="true">code</span>
             View source
           </a>

@@ -2,13 +2,12 @@
 import { HOSTING_NOTICE } from '../content/site'
 
 const links = [
-  { label: 'Source', href: 'https://github.com/MetrolistGroup/Metrolist' },
-  { label: 'Releases', href: 'https://github.com/MetrolistGroup/Metrolist/releases' },
-  { label: 'Issues', href: 'https://github.com/MetrolistGroup/Metrolist/issues' },
-  { label: 'Translations', href: 'https://hosted.weblate.org/projects/Metrolist/' },
+  { label: 'Source', href: 'https://github.com/Muse-Akheeyyy/Muse' },
+  { label: 'Releases', href: 'https://github.com/Muse-Akheeyyy/Muse/releases' },
+  { label: 'Issues', href: 'https://github.com/Muse-Akheeyyy/Muse/issues' },
   { label: 'Lyrics sync', href: '/sync' },
   { label: 'Privacy', href: '/privacy' },
-  { label: 'GPL-3.0', href: 'https://github.com/MetrolistGroup/Metrolist/blob/main/LICENSE' },
+  { label: 'GPL-3.0', href: 'https://github.com/Muse-Akheeyyy/Muse/blob/main/LICENSE' },
 ]
 </script>
 
@@ -16,9 +15,9 @@ const links = [
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <RouterLink to="/" class="footer__brand" aria-label="Metrolist home">
-          <img src="/logo.svg" alt="" width="50" height="50" loading="lazy" />
-          <strong>Metrolist</strong>
+        <RouterLink to="/" class="footer__brand" aria-label="Muse home">
+          <img src="/logo.png" alt="" width="50" height="50" loading="lazy" />
+          <strong>Muse</strong>
         </RouterLink>
       </div>
 
@@ -37,8 +36,8 @@ const links = [
 
       <div class="footer__bottom">
         <p>{{ HOSTING_NOTICE }}</p>
-        <p>Metrolist is an independent open-source project and isn’t affiliated with Google LLC. YouTube and YouTube Music are trademarks of Google LLC.</p>
-        <p>Built by <a href="https://github.com/mostafaalagamy" target="_blank" rel="noopener noreferrer">Mo Agamy</a> and contributors. Website by <a href="https://nyx.meowery.eu" target="_blank" rel="noopener noreferrer">Nyx</a>.</p>
+        <p>Muse is an independent open-source project and isn’t affiliated with Google LLC. YouTube and YouTube Music are trademarks of Google LLC.</p>
+        <p>Muse is based on <a href="https://github.com/MetrolistGroup/Metrolist" target="_blank" rel="noopener noreferrer">Metrolist</a> by Mo Agamy and contributors, and stays under GPL-3.0. Website by <a href="https://nyx.meowery.eu" target="_blank" rel="noopener noreferrer">Nyx</a>.</p>
       </div>
     </div>
   </footer>
