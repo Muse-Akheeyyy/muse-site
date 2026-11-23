@@ -243,7 +243,12 @@ await writeFile(new URL('llms-full.txt', dist), pages.flatMap(page => page.markd
 await writeFile(new URL('feed.xml', dist), guidesFeed(GUIDES))
 await rm(new URL('.vite/', dist), { recursive: true })
 // Serve the same hydration shell for arbitrary album and artist IDs without a 404.
-await writeFile(new URL('_redirects', dist), SHARE_ID_PATHS.map(path => `${path}/* ${path} 200`).join('\n') + '\n')
+// Android App Links require /.well-known/assetlinks.json, but Cloudflare Pages does not serve dot-directories.
+const APP_LINK_REWRITES = ['/.well-known/assetlinks.json /assetlinks.json 200']
+await writeFile(
+  new URL('_redirects', dist),
+  [...SHARE_ID_PATHS.map(path => `${path}/* ${path} 200`), ...APP_LINK_REWRITES].join('\n') + '\n'
+)
 
 // Discord component embeds (3,000-byte limit); the og:* tags remain the fallback.
 const button = (label: string, url: string) => ({ type: 2, style: 5, label, url })

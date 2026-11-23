@@ -170,7 +170,9 @@ for (const ending of [' />', '/>', '>']) {
       for (const path of ['/listen', '/party', ...SHARE_PATHS, ...SHARE_ID_PATHS.map(path => `${path}/*`)]) {
         expect(headers).toContain(`${path}\n  X-Robots-Tag: noindex, follow`)
       }
-      expect(await readFile(join(dist, '_redirects'), 'utf8')).toBe(SHARE_ID_PATHS.map(path => `${path}/* ${path} 200`).join('\n') + '\n')
+      expect(await readFile(join(dist, '_redirects'), 'utf8')).toBe(
+        [...SHARE_ID_PATHS.map(path => `${path}/* ${path} 200`), '/.well-known/assetlinks.json /assetlinks.json 200'].join('\n') + '\n'
+      )
       const indexable = routes.filter(([, , meta]) => meta.robots.startsWith('index'))
       const sitemap = await readFile(join(dist, 'sitemap.xml'), 'utf8')
       expect([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1])).toEqual(indexable.map(([, path]) => SITE_URL + path))

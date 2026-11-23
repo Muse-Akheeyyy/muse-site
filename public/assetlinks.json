@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.museakheeyyy.muse",
+      "sha256_cert_fingerprints": [
+        "86:9B:73:69:19:AC:93:14:24:8B:71:AA:B3:20:1B:64:8E:B8:D3:88:3D:38:3F:09:B8:D9:06:34:D0:CA:FE:A9"
+      ]
+    }
+  }
+]
