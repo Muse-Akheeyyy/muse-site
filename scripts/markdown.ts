@@ -100,10 +100,10 @@ MLX is the default and keeps every timing, singer, background vocal, translation
 `
 }
 
-export function privacyMarkdown(vueSource: string) {
+export function privacyMarkdown(vueSource: string, path = '/privacy') {
   const template = vueSource.match(/<header class="privacy-page__header">([\s\S]*?)<\/article>/)?.[1]
   if (!template) throw new Error('Privacy policy content was not found')
-  return `${htmlToMarkdown(template)}\n\nSource: ${SITE_URL}/privacy\n`
+  return `${htmlToMarkdown(template)}\n\nSource: ${SITE_URL}${path}\n`
 }
 
 const escapeMarkdown = (text: string) => text
