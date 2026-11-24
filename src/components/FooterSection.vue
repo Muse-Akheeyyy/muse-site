@@ -37,7 +37,7 @@ const links = [
       <div class="footer__bottom">
         <p>{{ HOSTING_NOTICE }}</p>
         <p>Muse is an independent open-source project and isn’t affiliated with Google LLC. YouTube and YouTube Music are trademarks of Google LLC.</p>
-        <p>Muse is based on <a href="https://github.com/MetrolistGroup/Metrolist" target="_blank" rel="noopener noreferrer">Metrolist</a> by Mo Agamy and contributors, and stays under GPL-3.0. Website by <a href="https://nyx.meowery.eu" target="_blank" rel="noopener noreferrer">Nyx</a>.</p>
+        <p>Muse is open source under GPL-3.0. Website by <a href="https://nyx.meowery.eu" target="_blank" rel="noopener noreferrer">Nyx</a>.</p>
       </div>
     </div>
   </footer>

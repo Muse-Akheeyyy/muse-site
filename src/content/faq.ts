@@ -22,9 +22,9 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     topic: 'installation',
-    question: 'Can I move over from Metrolist?',
+    question: 'Can I move over from another client?',
     guide: { label: 'Switching clients on Android', href: '/guides/best-youtube-music-client-android-2026#switching-apps' },
-    answer: 'Yes. Muse installs as a separate app with its own package, so it sits alongside Metrolist instead of replacing it. Make a backup in Metrolist first (Settings > Backup & import), install Muse, then restore that backup. Keep the old install until you have checked your library.',
+    answer: 'Yes. Muse installs as a separate app with its own package, so it sits alongside your current player instead of replacing it. Make a backup in the app you use now, install Muse, then restore that backup. Keep the old install until you have checked your library.',
   },
   {
     topic: 'library',

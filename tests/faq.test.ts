@@ -43,12 +43,12 @@ test('FAQ reading links resolve to actual guides and section anchors', () => {
 test('homepage answers retain migration, account, and safety qualifications', () => {
   const [platforms, migration, account, safety, hosting] = FAQ_ITEMS
   expect(platforms!.question).toMatch(/platforms/i)
-  expect(migration!.question).toMatch(/move over from Metrolist/)
+  expect(migration!.question).toMatch(/move over from another client/)
   expect(account!.question).toMatch(/YouTube Music account/)
   expect(safety!.question).toMatch(/safe to use/)
   expect(hosting!.answer).toBe(`No. ${HOSTING_NOTICE}`)
 
-  expect(migration!.answer).toMatch(/backup in Metrolist first/i)
+  expect(migration!.answer).toMatch(/backup in the app you use now/i)
   expect(migration!.answer).toMatch(/installs as a separate app/i)
   expect(migration!.answer).toMatch(/restore that backup/i)
   expect(migration!.answer).toMatch(/keep the old install until.*checked your library/i)
