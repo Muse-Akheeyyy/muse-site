@@ -12,10 +12,6 @@ import DownloadDialog from './DownloadDialog.vue'
         </div>
         <div class="download__actions">
           <DownloadDialog label="Download Muse" button-class="btn btn-filled btn-lg" />
-          <a href="https://github.com/Muse-Akheeyyy/Muse" class="btn btn-outlined" target="_blank" rel="noopener noreferrer">
-            <span class="material-symbols-rounded" aria-hidden="true">code</span>
-            View source
-          </a>
         </div>
       </div>
     </div>
@@ -60,10 +56,6 @@ import DownloadDialog from './DownloadDialog.vue'
   min-width: 220px;
   flex-direction: column;
   gap: 10px;
-}
-
-.download__actions .btn-outlined {
-  color: var(--md-sys-color-on-primary-container);
 }
 
 @media (max-width: 920px) {

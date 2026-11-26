@@ -32,10 +32,6 @@ onMounted(async () => {
           </p>
           <div class="hero__actions">
             <DownloadDialog button-class="btn btn-filled btn-lg" />
-            <a href="https://github.com/Muse-Akheeyyy/Muse" class="btn btn-outlined btn-lg" target="_blank" rel="noopener noreferrer">
-              <span class="material-symbols-rounded" aria-hidden="true">code</span>
-              View source
-            </a>
           </div>
         </div>
 
